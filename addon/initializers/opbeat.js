@@ -2,40 +2,35 @@
 import Ember from 'ember';
 import ENV from '../config/environment';
 
+function registerWindowOnError (notifyFn) {
+  return window.onerror = function (message, file, line, column, error) {
+    if (message === 'Script error.') {
+      return;
+    }
+    notifyFn(error || new Error(message, file, line));
+  };
+}
+
+function registerEmberOnError (notifyFn) {
+  var originalOnError = Ember.onerror || Ember.K;
+  Ember.onerror = function (err) {
+    originalOnError(err);
+    notifyFn(err);
+  };
+}
+
 export function initialize(/* application */) {
-  var registerWindowOnError,
-    registerEmberOnError,
-    notifyFn;
+  var notifyFn;
 
   if (!(ENV && ENV.opbeat)) {
     Ember.Logger.warn('Opbeat not configured!', ENV);
     return;
   }
 
-  registerWindowOnError = function (notifyFn) {
-    return window.onerror = function (message, file, line, column, error) {
-      if (message === 'Script error.') {
-        return;
-      }
-      notifyFn(error || new Error(message, file, line));
-    };
-  };
-
-  registerEmberOnError = function (notifyFn) {
-    var originalOnError;
-    originalOnError = Ember.onerror || Ember.K;
-    return Ember.onerror = (function () {
-      return function (err) {
-        originalOnError(err);
-        return notifyFn(err);
-      };
-    })(this);
-  };
-
   _opbeat('config', ENV.opbeat);
 
   notifyFn = function(error) {
-    return _opbeat('captureException', error);
+    _opbeat('captureException', error);
   };
 
   registerWindowOnError(notifyFn);
