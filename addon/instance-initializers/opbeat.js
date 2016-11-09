@@ -21,7 +21,6 @@ function registerEmberOnError (notifyFn) {
 export function initialize(appInstance) {
   var ENV = appInstance.lookup('config:environment'), notifyFn;
 
-  console.debug(ENV);
   if (!(ENV && ENV.opbeat)) {
     Ember.Logger.warn('Opbeat not configured!', ENV);
     return;
