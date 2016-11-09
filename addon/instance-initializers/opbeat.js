@@ -1,6 +1,5 @@
 /* globals _opbeat */
 import Ember from 'ember';
-import ENV from '../config/environment';
 
 function registerWindowOnError (notifyFn) {
   return window.onerror = function (message, file, line, column, error) {
@@ -19,9 +18,10 @@ function registerEmberOnError (notifyFn) {
   };
 }
 
-export function initialize(/* application */) {
-  var notifyFn;
+export function initialize(appInstance) {
+  var ENV = appInstance.lookup('config:environment'), notifyFn;
 
+  console.debug(ENV);
   if (!(ENV && ENV.opbeat)) {
     Ember.Logger.warn('Opbeat not configured!', ENV);
     return;
