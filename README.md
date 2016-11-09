@@ -1,6 +1,12 @@
-# Ember-cli-opbeat
+# ember-cli-opbeat
 
-This README outlines the details of collaborating on this Ember addon.
+An [opbeat-js](https://opbeat.com/docs/articles/get-started-with-javascript/) Ember shim.
+
+## Usage
+
+- add it to your `package.json` - `"ember-cli-opbeat": "*"`
+- get any Bower dependencies you need `ember g ember-cli-opbeat`
+- `bower install` to make it real
 
 ## Installation
 
