@@ -18,15 +18,20 @@ function registerEmberOnError (notifyFn) {
   };
 }
 
-export function initialize(appInstance) {
-  var ENV = appInstance.lookup('config:environment'), notifyFn;
+function configureOpbeat(config) {
+  _opbeat('config', config);
+}
 
-  if (!(ENV && ENV.opbeat)) {
-    Ember.Logger.warn('Opbeat not configured!', ENV);
+export function initialize(appInstance) {
+  var notifyFn;
+  var ENV = appInstance.resolveRegistration('config:environment');
+
+  if (!(ENV && ENV.APP && ENV.APP.opbeat)) {
+    Ember.Logger.warn('Opbeat not configured!');
     return;
   }
 
-  _opbeat('config', ENV.opbeat);
+  configureOpbeat(ENV.APP.opbeat);
 
   notifyFn = function(error) {
     _opbeat('captureException', error);
