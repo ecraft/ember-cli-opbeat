@@ -2,13 +2,13 @@
 
 An [opbeat-js](https://opbeat.com/docs/articles/get-started-with-javascript/) Ember shim.
 
-## Usage
+## Usage in your app
 
-- add it to your `package.json` - `"ember-cli-opbeat": "*"`
-- get any Bower dependencies you need `ember g ember-cli-opbeat`
-- `bower install` to make it real
+- add it to your `package.json`: `"ember-cli-opbeat": "*"`
+- `ember g ember-cli-opbeat`
+- in `environment.js` ENV.APP section: add `opbeat: { appId: 'your-app-id', orgId: 'your-org-id' }`
 
-## Installation
+## Installation for developing
 
 * `git clone <repository-url>` this repository
 * `cd ember-cli-opbeat`
