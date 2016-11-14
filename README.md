@@ -1,3 +1,8 @@
+[![npm version](https://badge.fury.io/js/ember-cli-opbeat.svg)](https://badge.fury.io/js/ember-cli-opbeat)
+[![Dependency Status](https://david-dm.org/ecraft/ember-cli-opbeat.svg)](https://david-dm.org/ecraft/ember-cli-opbeat)
+[![devDependency Status](https://david-dm.org/ecraft/ember-cli-opbeat/dev-status.svg)](https://david-dm.org/ecraft/ember-cli-opbeat?type=dev)
+
+
 # ember-cli-opbeat
 
 An [opbeat-js](https://opbeat.com/docs/articles/get-started-with-javascript/) Ember shim.
