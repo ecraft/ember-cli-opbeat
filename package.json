@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-opbeat",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add Opbeat exception logging to your Ember app.",
   "directories": {
     "doc": "doc",
