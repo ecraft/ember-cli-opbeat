@@ -12,7 +12,5 @@ This very small Ember Addon allows you to place configuration in your `environme
 
 ## Usage in your app
 
-- Add it to your `package.json`: `"ember-cli-opbeat": "*"`
-- `ember g ember-cli-opbeat`
+- `ember install ember-cli-opbeat`
 - Configure your application's ENV.APP section in  `environment.js`: add `opbeat: { appId: 'your-app-id', orgId: 'your-org-id' }`
-
