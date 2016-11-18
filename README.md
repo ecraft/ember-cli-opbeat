@@ -1,5 +1,6 @@
 [![npm version](https://badge.fury.io/js/ember-cli-opbeat.svg)](https://badge.fury.io/js/ember-cli-opbeat)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-opbeat.svg)](https://emberobserver.com/addons/ember-cli-opbeat)
+[![Build Status](https://travis-ci.org/ecraft/ember-cli-opbeat.svg?branch=master)](https://travis-ci.org/ecraft/ember-cli-opbeat)
 [![Dependency Status](https://david-dm.org/ecraft/ember-cli-opbeat.svg)](https://david-dm.org/ecraft/ember-cli-opbeat)
 [![devDependency Status](https://david-dm.org/ecraft/ember-cli-opbeat/dev-status.svg)](https://david-dm.org/ecraft/ember-cli-opbeat?type=dev)
 
