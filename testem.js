@@ -5,7 +5,7 @@ module.exports = {
   "disable_watching": true,
   "phantomjs_debug_port": 9000,
   "launch_in_ci": [
-    "PhantomJS"
+    "Chrome"
   ],
   "launch_in_dev": [
     "PhantomJS",
