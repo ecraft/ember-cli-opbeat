@@ -5,7 +5,7 @@ module.exports = {
   name: 'ember-cli-opbeat',
 
   isDevelopingAddon: function() {
-    return true;
+    return false;
   },
 
   included: function(app) {
