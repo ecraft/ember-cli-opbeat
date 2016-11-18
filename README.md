@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/ecraft/ember-cli-opbeat.svg?branch=master)](https://travis-ci.org/ecraft/ember-cli-opbeat)
 [![Dependency Status](https://david-dm.org/ecraft/ember-cli-opbeat.svg)](https://david-dm.org/ecraft/ember-cli-opbeat)
 [![devDependency Status](https://david-dm.org/ecraft/ember-cli-opbeat/dev-status.svg)](https://david-dm.org/ecraft/ember-cli-opbeat?type=dev)
+[![License](https://img.shields.io/npm/l/ember-cli-opbeat.svg)](LICENSE.md)
 
 # ember-cli-opbeat
 
