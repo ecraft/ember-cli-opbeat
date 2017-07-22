@@ -6,7 +6,6 @@
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"

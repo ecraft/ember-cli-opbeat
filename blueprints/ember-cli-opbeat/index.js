@@ -23,6 +23,10 @@ module.exports = {
 
         resolve();
       } catch(error) {
+        // resolve if bower.json doesn't exist
+        if (error.code == 'ENOENT') {
+          resolve();
+        }
         reject(error);
       }
   });
