@@ -4,13 +4,17 @@
 module.exports = {
   name: 'ember-cli-opbeat',
 
-  isDevelopingAddon: function() {
-    return false;
+  included() {
+    this._super.included.apply(this, arguments);
+    this.import('vendor/moment.js');
+    this.import('vendor/shims/moment.js');
   },
 
-  included: function(app) {
-    this._super.included(app);
+  treeForVendor(vendorTree) {
+    var momentTree = new Funnel(path.join(this.project.root, 'node_modules', 'opbeat-js'), {
+      files: ['opbeat.js'],
+    });
 
-    app.import(app.bowerDirectory + '/opbeat-js/opbeat.js');
-  }
+    return new MergeTrees([vendorTree, momentTree]);
+  },
 };
