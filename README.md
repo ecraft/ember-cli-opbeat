@@ -7,6 +7,12 @@
 
 # ember-cli-opbeat
 
+## Important: service discontinued
+
+**Opbeat, the service, is discontinued. This package is now historical.** Do not use.
+
+## Introduction
+
 An [opbeat-js](https://opbeat.com/docs/articles/get-started-with-javascript/) Ember shim.
 
 This very small Ember Addon allows you to place configuration in your `environment.js` ENV.APP section, and have it hook up `Ember.onerror` and `window.onerror` to also report exceptions to [Opbeat](https://opbeat.com).
